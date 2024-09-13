@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KCK Store</title>
+    <style>
+	body {
+            font-family: Arial, sans-serif;
+  
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+	label {
+            display: block;
+            margin-bottom: 10px;
+            color: #666;
+            font-weight: bold;
+        }
+        .diamond-options, .payment-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .option {
+            width: 30%;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f9f9f9;
+        }
+        .option.selected {
+            border-color: #1a73e8;
+            background-color: #e3f2fd;
+        }
+        .option:hover {
+            border-color: #1a73e8;
+        }
+        .option img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .payment-options label {
+            display: flex;
+            align-items: center;
+        }
+        .payment-options input {
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1a73e8;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0b57d0;
+        }
+        .details {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>KCK Store 
+	<br> Top Up Diamond
+	</h1>
+    <!-- Form Input -->
+    <form id="topupForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Masukkan Username" required>
+
+        <label for="playerID">ID Pemain ML</label>
+        <input type="text" id="playerID" name="playerID" placeholder="Masukkan ID Pemain ML" required>
+
+        <label for="zoneID">ID Zona</label>
+        <input type="text" id="zoneID" name="zoneID" placeholder="Masukkan ID Zona (Server)" required>
+
+        <label for="nominal">Pilih Nominal Top-Up</label>
+        <div class="diamond-options">
+            <div class="option" data-value="74" onclick="selectOption(this)">
+                <p>74 Diamonds</p>
+                <p>Rp 21.000</p>
+            </div>
+            <div class="option" data-value="88" onclick="selectOption(this)">
+                <p>88 Diamonds</p>
+                <p>Rp 25.000</p>
+            </div>
+            <div class="option" data-value="110" onclick="selectOption(this)">
+                <p>110 Diamonds</p>
+                <p>Rp 31.000</p>
+            </div>
+            <div class="option" data-value="144" onclick="selectOption(this)">
+                <p>144 Diamonds</p>
+                <p>Rp 40.000</p>
+            </div>
+            <div class="option" data-value="176" onclick="selectOption(this)">
+                <p>176 Diamonds</p>
+                <p>Rp 48.000</p>
+            </div>
+            <div class="option" data-value="222" onclick="selectOption(this)">
+                <p>222 Diamonds</p>
+                <p>Rp 59.000</p>
+            </div>
+            <div class="option" data-value="277" onclick="selectOption(this)">
+                <p>277 Diamonds</p>
+                <p>Rp 75.000</p>
+            </div>
+            <div class="option" data-value="305" onclick="selectOption(this)">
+                <p>305 Diamonds</p>
+                <p>Rp 82.000</p>
+            </div>
+            <div class="option" data-value="408" onclick="selectOption(this)">
+                <p>408 Diamonds</p>
+                <p>Rp 107.000</p>
+            </div>
+            <div class="option" data-value="528" onclick="selectOption(this)">
+                <p>528 Diamonds</p>
+                <p>Rp 137.000</p>
+            </div>
+            <div class="option" data-value="568" onclick="selectOption(this)">
+                <p>568 Diamonds</p>
+                <p>Rp 146.000</p>
+            </div>
+            <div class="option" data-value="875" onclick="selectOption(this)">
+                <p>875 Diamonds</p>
+                <p>Rp 222.000</p>
+            </div>
+            <div class="option" data-value="977" onclick="selectOption(this)">
+                <p>977 Diamonds</p>
+                <p>Rp 253.000</p>
+            </div>
+            <div class="option" data-value="1067" onclick="selectOption(this)">
+                <p>1067 Diamonds</p>
+                <p>Rp 272.000</p>
+            </div>
+            <div class="option" data-value="1136" onclick="selectOption(this)">
+                <p>1136 Diamonds</p>
+                <p>Rp 290.000</p>
+            </div>
+            <div class="option" data-value="1230" onclick="selectOption(this)">
+                <p>1230 Diamonds</p>
+                <p>Rp 318.000</p>
+            </div>
+            <div class="option" data-value="1358" onclick="selectOption(this)">
+                <p>1358 Diamonds</p>
+                <p>Rp 342.000</p>
+            </div>
+            <div class="option" data-value="1443" onclick="selectOption(this)">
+                <p>1443 Diamonds</p>
+                <p>Rp 352.000</p>
+            </div>
+            <div class="option" data-value="1704" onclick="selectOption(this)">
+                <p>1704 Diamonds</p>
+                <p>Rp 432.000</p>
+            </div>
+            <div class="option" data-value="2010" onclick="selectOption(this)">
+                <p>2010 Diamonds</p>
+                <p>Rp 480.000</p>
+            </div>
+        </div>
+
+        <label for="payment">Pilih Metode Pembayaran</label>
+        <div class="payment-options">
+            <label><input type="radio" name="payment" value="gopay" required> <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/GoPay_logo.png" alt="GoPay"> GoPay</label>
+            <label><input type="radio" name="payment" value="dana" required> <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Dana_indonesia_logo.png" alt="DANA"> DANA</label>
+            <label><input type="radio" name="payment" value="ovo" required> <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Logo_ovo_purple.svg" alt="OVO"> OVO</label>
+        </div>
+
+        <!-- Tombol Lanjutkan Pembayaran -->
+        <button type="button" onclick="showDetails()">Lanjutkan Pembayaran</button>
+    </form>
+
+    <!-- Perincian Pembelian -->
+    <div class="details" id="details" style="display: none;">
+        <h2>Perincian Pembelian</h2>
+        <p id="detailUsername"></p>
+        <p id="detailPlayerID"></p>
+        <p id="detailZoneID"></p>
+        <p id="detailNominal"></p>
+        <p id="detailPayment"></p>
+        <button type="button" onclick="redirectToWhatsApp()">Konfirmasi dan Lanjutkan ke WhatsApp</button>
+    </div>
+</div>
+
+<script>
+    function selectOption(element) {
+        // Menghapus kelas 'selected' dari semua opsi
+        const options = document.querySelectorAll('.diamond-options .option');
+        options.forEach(option => option.classList.remove('selected'));
+
+        // Menambahkan kelas 'selected' ke elemen yang dipilih
+        element.classList.add('selected');
+    }
+
+    function showDetails() {
+        const username = document.getElementById('username').value;
+        const playerID = document.getElementById('playerID').value;
+        const zoneID = document.getElementById('zoneID').value;
+
+        const selectedOption = document.querySelector('.diamond-options .option.selected');
+        const nominal = selectedOption ? selectedOption.textContent.trim() : '';
+
+        const selectedPayment = document.querySelector('input[name="payment"]:checked');
+        const payment = selectedPayment ? selectedPayment.parentElement.textContent.trim() : '';
+
+        if (username && playerID && zoneID && nominal && payment) {
+            document.getElementById('detailUsername').textContent = 'Username: ' + username;
+            document.getElementById('detailPlayerID').textContent = 'ID Pemain: ' + playerID;
+            document.getElementById('detailZoneID').textContent = 'ID Zona: ' + zoneID;
+            document.getElementById('detailNominal').textContent = 'Nominal Top-Up: ' + nominal;
+            document.getElementById('detailPayment').textContent = 'Metode Pembayaran: ' + payment;
+
+            document.getElementById('details').style.display = 'block';
+        } else {
+            alert('Mohon lengkapi semua data dan pilih nominal serta metode pembayaran.');
+        }
+    }
+
+    function redirectToWhatsApp() {
+        const username = document.getElementById('username').value;
+        const playerID = document.getElementById('playerID').value;
+        const zoneID = document.getElementById('zoneID').value;
+
+        const selectedOption = document.querySelector('.diamond-options .option.selected');
+        const nominal = selectedOption ? selectedOption.textContent.trim() : '';
+
+        const selectedPayment = document.querySelector('input[name="payment"]:checked');
+        const payment = selectedPayment ? selectedPayment.parentElement.textContent.trim() : '';
+
+        const message = `Halo, saya ingin membeli ${nominal}. Berikut rincian pembelian:\n\nUsername: ${username}\nID Pemain: ${playerID}\nID Zona: ${zoneID}\nMetode Pembayaran: ${payment}`;
+
+        const whatsappUrl = `https://wa.me/6289692310108?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    }
+</script>
+
+</body>
+</html>
